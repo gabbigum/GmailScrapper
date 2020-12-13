@@ -95,7 +95,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		if msgList == nil {
+		if len(msgList.Messages) == 0 {
 			break
 		}
 
@@ -106,6 +106,7 @@ func main() {
 			if err != nil {
 				fmt.Println(err)
 			}
+
 			trashMsg, err := srv.Users.Messages.Trash(user, readMsg.Id).Do()
 			if err != nil {
 				fmt.Println(err)
