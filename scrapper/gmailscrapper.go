@@ -114,6 +114,5 @@ func main() {
 		}
 	}
 
-	fmt.Scanln()
 	fmt.Println("All unread messages deleted.")
 }
